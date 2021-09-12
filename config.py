@@ -1,0 +1,4 @@
+params = {
+    "prefix": "!",
+    "discordBotToken": "",
+}
