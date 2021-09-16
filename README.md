@@ -1,6 +1,7 @@
 # Discord Bot for OpenSea
 
-This project helps you to get information regarding any collection and any item within the collection. I have also added auto-suggestion for collection slugs which gives you suggestion whenever given collection-slug doesn't exist. 
+This project helps you to get information regarding any collection and any item within the collection. I have also added auto-suggestion for collection slugs which gives you suggestion whenever given collection-slug doesn't exist.
+It also send notification to your discord channel for new listings and new sales of your specified collection. 
 
 ## Commands
  - info &#60;collection-slug&#62;

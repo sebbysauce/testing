@@ -1,10 +1,9 @@
 import datetime
 import json
 import requests
-from pprint import pprint
+from utilities import dprint
 import discord
 from discord.ext import commands
-from discord.ext.commands.errors import MissingRequiredArgument
 import difflib
 from config import params
 from bs4 import BeautifulSoup
@@ -74,7 +73,7 @@ async def info(ctx, slug=None, token=None):
 
                 floor_prize = str(view.text)
             except:
-                # pprint(collection)
+                dprint(collection)
                 floor_prize = collection['stats']['floor_price']
 
             embed.add_field(name="Items", value=stats["count"])
@@ -107,15 +106,9 @@ async def info(ctx, slug=None, token=None):
             image = final["image"]
             traits = final["attributes"]
 
-            # name = result["collection"]["name"] + ' ' + result["name"]
             total = result["collection"]["stats"]["count"]
             owner = result["owner"]
-            # image = result["image_original_url"]
             link = result["permalink"]
-            # traits = result["traits"]
-
-            # rank = str(str(token) + f" (out of {int(total)})")
-            # rarity = 0
 
             embed = discord.Embed(title=name, color=discord.Colour.blue(), url=link,
                                   timestamp=datetime.datetime.utcnow())
