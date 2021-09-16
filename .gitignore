@@ -115,3 +115,7 @@ dmypy.json
 
 .idea/
 files/
+
+.gitattributes
+
+.DS_STORE
